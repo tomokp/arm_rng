@@ -1,0 +1,6 @@
+cc=gcc #sets the cc variable to gcc thus using gcc whilst compiling
+CFLAGS=-I. -Wall -Wextra -Wfatal-errors -Wpedantic  #sets all the flags that get used whilst compiling
+FILES=$(patsubst %.c,%.o,%.h$(wildcard *.c)) 
+
+test: $(FILES)  #if any of these files has been changed execute line below
+	$(CC) -o test random.c  #variable compilation that makes use of the variables declared at the beginning

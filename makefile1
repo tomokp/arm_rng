@@ -1,0 +1,2 @@
+test: random.c logic.c variables.h  
+	gcc -o test random.c -I. 
